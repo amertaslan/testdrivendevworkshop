@@ -21,6 +21,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -53,6 +54,7 @@ class MainActivity : AppCompatActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
+@Preview
 fun CurrencyConverterScreen(viewModel: CurrencyViewModel = hiltViewModel()
 ) {
     val conversionResult by viewModel.conversionResult.collectAsState("")
@@ -82,4 +84,9 @@ fun CurrencyConverterScreen(viewModel: CurrencyViewModel = hiltViewModel()
         // Example: Button to trigger conversion
 
     }
+}
+
+@Composable
+fun ShowRatesList() {
+
 }
